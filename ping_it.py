@@ -1,8 +1,24 @@
 import os
 import sys
 import time
+import datetime
 
-from send_email import sendEmail 
+if (len(sys.argv) < 3):
+    args = sys.argv[1].split(" ")
+    smtpService = args[0]
+    domain = args[1]
+else:
+    smtpService = sys.argv[1]
+    domain = sys.argv[2]
+
+print("\n\nThe smtp service to use is " + smtpService + ".")
+print("The domain to be monitored is " + domain + ".")
+print("It is now: " + str(datetime.datetime.now()))
+
+if smtpService == "mailtrap":
+    from send_email_mailtrap import sendEmail
+else:
+    from send_email_localhost import sendEmail
 
 # hard-coded timing variables
 success_wait_time = 1
@@ -18,8 +34,6 @@ failure_wait_time = 10
 # The other test that can be done is enabling/disabling internet access
 # on the machine on which the script is being executed.
 
-domain = sys.argv[1]
-print("\n\n The domain to be monitored by this process is " + domain + ".")
 
 while True:
     print("\n****************************************************")
