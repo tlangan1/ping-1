@@ -22,5 +22,5 @@ def sendEmail(domain):
         server.sendmail(sender, receiver, message)
         print("mail successfully sent")
 
-#domain = "googletommy.com"
-#sendEmail(domain)
+# domain = "googletommy.com"
+# sendEmail(domain)
