@@ -1,9 +1,10 @@
 import smtplib
 import sys
 
-subject = "Hello Operator, ACTION REQUIRED: Ping Failure"
-sender = "<python.ping@altisat.com>"
-receiver = "Tom.Langan@Comcast.net"
+from email_constants import subject, sender, receiver
+# subject = "Hello Operator, ACTION REQUIRED: Ping Failure"
+# sender = "<python.ping@altisat.com>"
+# receiver = "Tom.Langan@Comcast.net"
 
 smtpObj = smtplib.SMTP( "localhost", 8025 )
 

@@ -1,8 +1,9 @@
 import smtplib
 
-subject = "Hello Operator, ACTION REQUIRED: Ping Failure"
-sender = "<python.ping@altisat.com>"
-receiver = "Tom.Langan@Comcast.net"
+from email_constants import subject, sender, receiver
+# subject = "Hello Operator, ACTION REQUIRED: Ping Failure"
+# sender = "<python.ping@altisat.com>"
+# receiver = "Tom.Langan@Comcast.net"
 
 # These credentials can be found here,
 # https://mailtrap.io/inboxes/3085607/messages
